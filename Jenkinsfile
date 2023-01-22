@@ -20,6 +20,7 @@ pipeline {
             steps{
                 echo "deploying the application"
                 echo "deploying in ${server_cred}"
+                sh "${server_cred}"
             }
         }
     }
