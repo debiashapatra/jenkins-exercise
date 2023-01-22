@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment{
     Version='1.3'
+    server_cred=credential('server-credential')
     }
     stages{
         stage("Build"){
@@ -18,6 +19,7 @@ pipeline {
         stage("Deploy"){
             steps{
                 echo "deploying the application"
+                echo "deploying in ${server_cred}"
             }
         }
     }
