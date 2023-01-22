@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment{
     Version='1.3'
-    server_cred=credential('server-credential')
+    server_cred=credentials("server-credential")
     }
     stages{
         stage("Build"){
